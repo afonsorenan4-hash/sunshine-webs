@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Restauração capilar de excelência com Dr. Anderson Lima. Transplante capilar, tricologia e acompanhamento personalizado.",
       },
       { name: "author", content: "Dr. Anderson Lima" },
-      { property: "og:title", content: "Dr. Anderson Lima — Restauração Capilar" },
+      { property: "og:title", content: "Dr. Anderson Lima — Tricologia e Transplante Capilar" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Dr. Anderson Lima — Tricologia e Transplante Capilar" },
+      { name: "description", content: "Builds modern WordPress websites with Elementor, featuring before/after image sliders for visual comparisons." },
+      { property: "og:description", content: "Builds modern WordPress websites with Elementor, featuring before/after image sliders for visual comparisons." },
+      { name: "twitter:description", content: "Builds modern WordPress websites with Elementor, featuring before/after image sliders for visual comparisons." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dc2f0240-a719-4587-9d14-99a87a73f60d/id-preview-da5df16f--e9979c74-70f5-4adb-abc0-1117d1790867.lovable.app-1782165362907.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dc2f0240-a719-4587-9d14-99a87a73f60d/id-preview-da5df16f--e9979c74-70f5-4adb-abc0-1117d1790867.lovable.app-1782165362907.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
