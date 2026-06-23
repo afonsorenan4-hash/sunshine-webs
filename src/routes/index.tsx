@@ -196,7 +196,7 @@ function Hero() {
 
         <div className="relative">
           <div className="absolute -inset-6 rounded-3xl bg-brand/20 blur-3xl" aria-hidden />
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-surface-elevated">
+          <div className="relative overflow-hidden rounded-3xl border border-border bg-card">
             <img
               src={drPortrait}
               alt="Dr. Anderson Lima, médico especialista em tricologia e transplante capilar"
@@ -220,7 +220,7 @@ function Hero() {
 function TrustBar() {
   const items = ["Técnica FUE", "Resultados Naturais", "Acompanhamento", "Anestesia local", "Sem cortes"];
   return (
-    <div className="border-y border-border/60 bg-surface/40">
+    <div className="border-y border-border/60 bg-muted/60">
       <div className="container-x flex flex-wrap items-center justify-center gap-x-10 gap-y-3 py-5 text-xs uppercase tracking-[0.2em] text-foreground/55">
         {items.map((i) => (
           <span key={i} className="flex items-center gap-2">
@@ -296,7 +296,7 @@ function Service() {
     },
   ];
   return (
-    <section id="servico" className="relative overflow-hidden bg-surface/30 py-24 md:py-32">
+    <section id="servico" className="relative overflow-hidden bg-muted/60 py-24 md:py-32">
       <div className="container-x grid gap-14 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
         <div className="relative">
           <div className="overflow-hidden rounded-3xl border border-border">
@@ -323,7 +323,7 @@ function Service() {
             {features.map((f) => (
               <li
                 key={f.title}
-                className="rounded-2xl border border-border bg-surface-elevated/50 p-5 transition hover:border-brand/40"
+                className="rounded-2xl border border-border bg-card shadow-sm p-5 transition hover:border-brand/40"
               >
                 <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand/15 text-brand">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
@@ -377,7 +377,7 @@ function Gallery() {
     { src: drPortrait, label: "Consulta" },
   ];
   return (
-    <section className="bg-surface/30 py-24 md:py-32">
+    <section className="bg-muted/60 py-24 md:py-32">
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
@@ -434,7 +434,7 @@ function Videos() {
         {videos.map((v, i) => (
           <div
             key={i}
-            className="overflow-hidden rounded-2xl border border-border bg-surface"
+            className="overflow-hidden rounded-2xl border border-border bg-card"
           >
             <div className="relative aspect-video">
               <iframe
@@ -475,7 +475,7 @@ function Testimonials() {
     },
   ];
   return (
-    <section id="depoimentos" className="bg-surface/30 py-24 md:py-32">
+    <section id="depoimentos" className="bg-muted/60 py-24 md:py-32">
       <div className="container-x">
         <div className="mx-auto max-w-2xl text-center">
           <SectionEyebrow center>Depoimentos</SectionEyebrow>
@@ -487,7 +487,7 @@ function Testimonials() {
           {items.map((t) => (
             <blockquote
               key={t.name}
-              className="flex flex-col rounded-2xl border border-border bg-surface-elevated/50 p-7"
+              className="flex flex-col rounded-2xl border border-border bg-card shadow-sm p-7"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="text-brand/70">
                 <path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-6-2-6-6V7zm9 0h4v4h-3c0 2 1 3 3 3v3c-4 0-6-2-6-6V7z" />
@@ -602,7 +602,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 /* ---------- Contact ---------- */
 function Contact() {
   return (
-    <section id="contato" className="relative overflow-hidden bg-surface/30 py-24 md:py-32">
+    <section id="contato" className="relative overflow-hidden bg-muted/60 py-24 md:py-32">
       <div className="container-x grid gap-12 md:grid-cols-2 md:gap-16">
         <div>
           <SectionEyebrow>Onde estamos</SectionEyebrow>
