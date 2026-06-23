@@ -65,7 +65,7 @@ function Home() {
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="container-x flex h-16 items-center justify-between">
         <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight">
           <LogoMark />
@@ -107,14 +107,14 @@ function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-white/5 md:hidden">
+        <div className="border-t border-border/60 md:hidden">
           <nav className="container-x flex flex-col gap-1 py-3">
             {navItems.map((it) => (
               <a
                 key={it.href}
                 href={it.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-2 text-sm text-foreground/85 hover:bg-white/5"
+                className="rounded-md px-2 py-2 text-sm text-foreground/85 hover:bg-muted"
               >
                 {it.label}
               </a>
@@ -174,13 +174,13 @@ function Hero() {
             </a>
             <a
               href="#evolucoes"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-foreground transition hover:border-brand hover:text-brand"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-foreground transition hover:border-brand hover:text-brand"
             >
               Ver resultados
             </a>
           </div>
 
-          <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
+          <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-border pt-8">
             {[
               { k: "+10", v: "anos de experiência" },
               { k: "+1.500", v: "procedimentos" },
@@ -196,7 +196,7 @@ function Hero() {
 
         <div className="relative">
           <div className="absolute -inset-6 rounded-3xl bg-brand/20 blur-3xl" aria-hidden />
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-surface-elevated">
+          <div className="relative overflow-hidden rounded-3xl border border-border bg-surface-elevated">
             <img
               src={drPortrait}
               alt="Dr. Anderson Lima, médico especialista em tricologia e transplante capilar"
@@ -220,7 +220,7 @@ function Hero() {
 function TrustBar() {
   const items = ["Técnica FUE", "Resultados Naturais", "Acompanhamento", "Anestesia local", "Sem cortes"];
   return (
-    <div className="border-y border-white/5 bg-surface/40">
+    <div className="border-y border-border/60 bg-surface/40">
       <div className="container-x flex flex-wrap items-center justify-center gap-x-10 gap-y-3 py-5 text-xs uppercase tracking-[0.2em] text-foreground/55">
         {items.map((i) => (
           <span key={i} className="flex items-center gap-2">
@@ -299,7 +299,7 @@ function Service() {
     <section id="servico" className="relative overflow-hidden bg-surface/30 py-24 md:py-32">
       <div className="container-x grid gap-14 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
         <div className="relative">
-          <div className="overflow-hidden rounded-3xl border border-white/10">
+          <div className="overflow-hidden rounded-3xl border border-border">
             <img
               src={clinicImg}
               alt="Interior da clínica do Dr. Anderson Lima"
@@ -323,7 +323,7 @@ function Service() {
             {features.map((f) => (
               <li
                 key={f.title}
-                className="rounded-2xl border border-white/10 bg-surface-elevated/50 p-5 transition hover:border-brand/40"
+                className="rounded-2xl border border-border bg-surface-elevated/50 p-5 transition hover:border-brand/40"
               >
                 <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand/15 text-brand">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
@@ -394,7 +394,7 @@ function Gallery() {
           {items.map((it, i) => (
             <figure
               key={i}
-              className={`group relative overflow-hidden rounded-2xl border border-white/10 ${
+              className={`group relative overflow-hidden rounded-2xl border border-border ${
                 i === 0 ? "md:col-span-2 md:row-span-2" : ""
               }`}
               style={{ aspectRatio: i === 0 ? "1 / 1" : "1 / 1" }}
@@ -434,7 +434,7 @@ function Videos() {
         {videos.map((v, i) => (
           <div
             key={i}
-            className="overflow-hidden rounded-2xl border border-white/10 bg-surface"
+            className="overflow-hidden rounded-2xl border border-border bg-surface"
           >
             <div className="relative aspect-video">
               <iframe
@@ -487,7 +487,7 @@ function Testimonials() {
           {items.map((t) => (
             <blockquote
               key={t.name}
-              className="flex flex-col rounded-2xl border border-white/10 bg-surface-elevated/50 p-7"
+              className="flex flex-col rounded-2xl border border-border bg-surface-elevated/50 p-7"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="text-brand/70">
                 <path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-6-2-6-6V7zm9 0h4v4h-3c0 2 1 3 3 3v3c-4 0-6-2-6-6V7z" />
@@ -495,7 +495,7 @@ function Testimonials() {
               <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/80">
                 "{t.text}"
               </p>
-              <footer className="mt-6 border-t border-white/10 pt-4">
+              <footer className="mt-6 border-t border-border pt-4">
                 <p className="font-display font-semibold">{t.name}</p>
                 <p className="text-xs uppercase tracking-widest text-foreground/50">
                   {t.role}
@@ -557,7 +557,7 @@ function FAQ() {
             Falar no WhatsApp
           </a>
         </div>
-        <div className="divide-y divide-white/10 border-y border-white/10">
+        <div className="divide-y divide-border border-y border-border">
           {faqs.map((f, i) => (
             <FaqItem key={i} q={f.q} a={f.a} />
           ))}
@@ -578,7 +578,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       >
         <span className="font-display text-lg font-semibold">{q}</span>
         <span
-          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 transition ${
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border transition ${
             open ? "rotate-45 border-brand bg-brand/15 text-brand" : "text-foreground/60"
           }`}
         >
@@ -624,7 +624,7 @@ function Contact() {
             Agendar avaliação
           </a>
         </div>
-        <div className="overflow-hidden rounded-3xl border border-white/10">
+        <div className="overflow-hidden rounded-3xl border border-border">
           <iframe
             title="Localização da clínica"
             src="https://www.google.com/maps?q=Macei%C3%B3,%20Alagoas&output=embed"
@@ -657,7 +657,7 @@ function Info({ label, value, href }: { label: string; value: string; href?: str
 /* ---------- Footer ---------- */
 function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-background py-10">
+    <footer className="border-t border-border bg-background py-10">
       <div className="container-x flex flex-col items-center justify-between gap-4 md:flex-row">
         <div className="flex items-center gap-2 font-display font-semibold">
           <LogoMark />
@@ -672,7 +672,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
-            className="rounded-full border border-white/10 p-2 transition hover:border-brand hover:text-brand"
+            className="rounded-full border border-border p-2 transition hover:border-brand hover:text-brand"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -685,7 +685,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="WhatsApp"
-            className="rounded-full border border-white/10 p-2 transition hover:border-brand hover:text-brand"
+            className="rounded-full border border-border p-2 transition hover:border-brand hover:text-brand"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
