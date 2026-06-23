@@ -44,44 +44,53 @@
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 
-  /* Verde Médico Moderno */
-  --background: oklch(0.18 0.025 165);          /* #0a1f1c deep */
-  --foreground: oklch(0.97 0.01 100);           /* #f5f5f0 cream */
-  --surface: oklch(0.22 0.03 165);              /* slightly lifted */
-  --surface-elevated: oklch(0.28 0.04 165);     /* #0f3a33 ish */
+  /* Light, clean — verde apenas como acento */
+  --background: oklch(0.99 0.005 100);
+  --foreground: oklch(0.18 0.02 165);
+  --surface: oklch(0.97 0.008 140);
+  --surface-elevated: oklch(1 0 0);
 
-  --card: oklch(0.22 0.03 165);
-  --card-foreground: oklch(0.97 0.01 100);
-  --popover: oklch(0.22 0.03 165);
-  --popover-foreground: oklch(0.97 0.01 100);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 165);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 165);
 
-  --brand: oklch(0.72 0.16 160);                /* #10b981 emerald */
-  --brand-foreground: oklch(0.15 0.02 165);
-  --brand-dim: oklch(0.55 0.12 160);
+  --brand: oklch(0.55 0.14 162);
+  --brand-foreground: oklch(0.99 0.005 100);
+  --brand-dim: oklch(0.72 0.12 160);
 
-  --primary: oklch(0.72 0.16 160);
-  --primary-foreground: oklch(0.15 0.02 165);
+  --primary: oklch(0.55 0.14 162);
+  --primary-foreground: oklch(0.99 0.005 100);
 
-  --secondary: oklch(0.28 0.04 165);
-  --secondary-foreground: oklch(0.97 0.01 100);
-  --muted: oklch(0.25 0.03 165);
-  --muted-foreground: oklch(0.72 0.02 100);
-  --accent: oklch(0.72 0.16 160);
-  --accent-foreground: oklch(0.15 0.02 165);
+  --secondary: oklch(0.96 0.01 140);
+  --secondary-foreground: oklch(0.18 0.02 165);
+  --muted: oklch(0.96 0.008 140);
+  --muted-foreground: oklch(0.45 0.02 165);
+  --accent: oklch(0.55 0.14 162);
+  --accent-foreground: oklch(0.99 0.005 100);
 
   --destructive: oklch(0.58 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.72 0.16 160);
+  --border: oklch(0.18 0.02 165 / 10%);
+  --input: oklch(0.18 0.02 165 / 14%);
+  --ring: oklch(0.55 0.14 162);
 }
 
 .dark {
-  --background: oklch(0.18 0.025 165);
+  --background: oklch(0.99 0.005 100);
+  --foreground: oklch(0.18 0.02 165);
+}
+
+@utility section-dark {
+  --background: oklch(0.20 0.028 165);
   --foreground: oklch(0.97 0.01 100);
+  --muted-foreground: oklch(0.78 0.02 100);
+  --border: oklch(1 0 0 / 12%);
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 @layer base {
