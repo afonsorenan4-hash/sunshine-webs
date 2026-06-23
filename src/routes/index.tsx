@@ -657,7 +657,7 @@ function Info({ label, value, href }: { label: string; value: string; href?: str
 /* ---------- Footer ---------- */
 function Footer() {
   return (
-    <footer className="border-t border-border bg-background py-10">
+    <footer className="section-dark border-t border-border py-10">
       <div className="container-x flex flex-col items-center justify-between gap-4 md:flex-row">
         <div className="flex items-center gap-2 font-display font-semibold">
           <LogoMark />
