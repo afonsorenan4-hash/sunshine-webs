@@ -146,7 +146,7 @@ function LogoMark() {
 /* ---------- Hero ---------- */
 function Hero() {
   return (
-    <section id="top" className="relative grain-bg overflow-hidden">
+    <section id="top" className="section-dark relative grain-bg overflow-hidden">
       <div className="container-x grid gap-12 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-28 lg:py-32">
         <div className="flex flex-col justify-center">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand/30 bg-brand/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-brand">
